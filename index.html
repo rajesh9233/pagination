@@ -9,19 +9,36 @@
 </head>
 <body>
     <div class="container">
-            <nav class="fixed-bottom" aria-label="Page navigation example">
-                <ul class="pagination justify-content-center">
-                  <li class="page-item disabled">
-                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                  </li>
-                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item">
-                    <a class="page-link" href="#">Next</a>
-                  </li>
-                </ul>
-              </nav>
+            <table class="table table-success mt-5" id="table-info">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody id="table-row">
+                </tbody>
+            </table>
+                <nav class="fixed-bottom" aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                    <li class="page-item" id="first" name="first">
+                        <a class="page-link" href="#" tabindex="-1" onclick="pageChange('first',pageStart,pageEnd)">First</a>
+                    </li>
+                    <li class="page-item" id="prev" name="prev">
+                        <a class="page-link" href="#" tabindex="-1" onclick="pageChange('prev',pageStart,pageEnd)">Previous</a>
+                    </li>
+                    <li class="page-item active" id="page1" name="page1"><a class="page-link" href="#" onclick="pageChange('page1',pageStart,pageEnd)">1</a></li>
+                    <li class="page-item" id="page2" name="page2"><a class="page-link" href="#" onclick="pageChange('page2',pageStart,pageEnd)">2</a></li>
+                    <li class="page-item" id="page3" name="page3"><a class="page-link" href="#" onclick="pageChange('page3',pageStart,pageEnd)">3</a></li>
+                    <li class="page-item" id="next" name="next">
+                        <a class="page-link" href="#" onclick="pageChange('next',pageStart,pageEnd)">Next</a>
+                    </li>
+                    <li class="page-item" id="last" name="last">
+                        <a class="page-link" href="#" onclick="pageChange('last',pageStart,pageEnd)">Last</a>
+                    </li>
+                    </ul>
+                </nav>
     </div>
     <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" ></script>
